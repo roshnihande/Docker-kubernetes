@@ -4,8 +4,7 @@ Overview This repository demonstrates the deployment of a Fibonacci app using Do
 
 Architecture:-
 
-![image](https://github.com/roshnihande/Docker-kubernetes/assets/Architecture.png)
-
+![Alt Text](assets/Architecture.png)
 
 The architecture consists of several components that work together to handle user requests and calculate Fibonacci values:
 
