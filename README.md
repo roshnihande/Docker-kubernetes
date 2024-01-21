@@ -1,6 +1,6 @@
-Fibonacci App Deployment with Docker:-
+Fibonacci Calculator Deployment with Docker:-
 
-Overview This repository demonstrates the deployment of a Fibonacci app using Docker with multiple containers. The Fibonacci app calculates the Fibonacci value for a given index through a complex architecture involving multiple services.
+Overview:- This repository demonstrates the deployment of a Fibonacci Calculatore using Docker with multiple containers. The Fibonacci calculates the Fibonacci value for a given index through a complex architecture involving multiple services.
 
 Architecture:-
 
@@ -22,18 +22,18 @@ f) Worker:- The Worker service watches Redis for new indices. When a new index i
 
 Fibonacci Calculation Workflow:-
 
-User makes a request to the Nginx server with a specific index (e.g., 7).
+1) User makes a request to the Nginx server with a specific index (e.g., 7).
 
-Nginx routes the request to either the React server or the Express server based on the user's needs.
+2) Nginx routes the request to either the React server or the Express server based on the user's needs.
 
-React Server (if required) sends an API request to the Express server with the specified index.
+3) React Server (if required) sends an API request to the Express server with the specified index.
 
-Express Server processes the request and interacts with the PostgreSQL server for a permanent list of indices.
+4) Express Server processes the request and interacts with the PostgreSQL server for a permanent list of indices.
 
-Express Server stores the new index in Redis.
+5) Express Server stores the new index in Redis.
 
-Worker continuously watches Redis for new indices.
+6) Worker continuously watches Redis for new indices.
 
-If a new index is detected, the Worker calculates the Fibonacci value and updates Redis.
+7) If a new index is detected, the Worker calculates the Fibonacci value and updates Redis.
 
-The final Fibonacci value for the given index is returned to the React server and then to the user.
+8) The final Fibonacci value for the given index is returned to the React server and then to the user.
